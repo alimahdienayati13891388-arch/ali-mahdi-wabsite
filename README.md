@@ -1,76 +1,139 @@
 <!--DOCTYPE html-->
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071124"><meta name="description" content="وب‌سایت شخصی علی مهدی؛ علاقه‌مند به برنامه‌نویسی، کامپیوتر و هوش مصنوعی.">
-<title>علی مهدی | دنیای فناوری</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#071124;--mint:#62edc5;--mint2:#8bf5d8;--text:#f4f7ff;--muted:#aab7cc;--line:rgba(183,207,241,.15)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}
-body{margin:0;background:radial-gradient(ellipse at 80% 20%,rgba(39,104,155,.28),transparent 38%),radial-gradient(ellipse at 12% 75%,rgba(44,204,177,.10),transparent 32%),var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 42px));margin:auto}
-.topbar{position:sticky;top:0;z-index:20;background:rgba(7,17,36,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-size:24px;font-weight:900;letter-spacing:.4px;direction:ltr}.brand span{color:var(--mint)}
-.navlinks{display:flex;gap:27px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--mint)}
-.menu-wrap{position:relative}.menu-btn{width:48px;height:48px;border:1px solid rgba(139,245,216,.38);border-radius:50%;background:rgba(119,238,207,.10);backdrop-filter:blur(12px);display:grid;place-items:center;cursor:pointer;transition:.25s;box-shadow:0 0 28px rgba(98,237,197,.09)}
-.menu-btn:hover,.menu-btn[aria-expanded=true]{background:rgba(98,237,197,.22);transform:rotate(90deg);box-shadow:0 0 25px rgba(98,237,197,.2)}
-.dots{display:flex;gap:4px}.dots i{width:4px;height:4px;border-radius:50%;background:var(--mint);display:block}
-.dropdown{position:absolute;top:60px;left:0;width:205px;padding:9px;background:rgba(13,27,49,.94);border:1px solid rgba(139,245,216,.23);border-radius:18px;box-shadow:0 20px 55px #0008;backdrop-filter:blur(20px);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.22s}
-.dropdown.open{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:flex;gap:10px;padding:12px 13px;border-radius:12px;color:#dce7f6;font-size:14px}.dropdown a:hover{background:rgba(98,237,197,.12);color:var(--mint)}
-.hero{min-height:690px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;padding:75px 0 55px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:10px 17px;border:1px solid rgba(98,237,197,.3);background:rgba(98,237,197,.07);border-radius:50px;color:var(--mint2);font-size:14px}
-.pulse{width:9px;height:9px;background:var(--mint);border-radius:50%;box-shadow:0 0 0 6px rgba(98,237,197,.12);animation:pulse 1.8s infinite}
-h1{font-size:clamp(37px,5vw,66px);line-height:1.45;margin:27px 0 17px;font-weight:900}h1 em{font-style:normal;color:var(--mint)}
-.intro{font-size:18px;line-height:2.1;color:var(--muted);max-width:650px;margin:0 0 29px}
-.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:16px;font-weight:800;display:inline-flex;align-items:center;gap:10px;transition:.25s;border:1px solid var(--line)}
-.btn.primary{background:linear-gradient(120deg,var(--mint),#79bfff);color:#071124;border:0}.btn.secondary{background:rgba(255,255,255,.035)}.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px #0003}
-.visual{min-height:410px;display:grid;place-items:center;position:relative}.orbit{width:min(350px,78vw);aspect-ratio:1;border:1px solid rgba(154,190,235,.25);border-radius:50%;display:grid;place-items:center;position:relative;animation:float 6s ease-in-out infinite}
-.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(154,190,235,.13);border-radius:50%;inset:22px}.orbit:after{inset:-22px}
-.monogram{width:72%;aspect-ratio:1;border-radius:34% 34% 42% 42%;background:linear-gradient(135deg,#5cebc0,#78b9ff);display:grid;place-items:center;color:#071124;font-size:clamp(75px,12vw,130px);font-weight:900;direction:ltr;box-shadow:0 25px 75px rgba(67,205,193,.2)}
-.float-tag{position:absolute;padding:12px 18px;border:1px solid rgba(183,207,241,.17);background:rgba(17,30,52,.9);backdrop-filter:blur(15px);border-radius:17px;color:#dce7f6;font-size:17px;box-shadow:0 15px 40px #0003}.tag1{top:10%;right:-3%}.tag2{bottom:10%;left:-3%}.spark{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--mint);right:5%;bottom:20%;box-shadow:0 0 20px var(--mint)}
-section.content{padding:70px 0;border-top:1px solid var(--line)}.section-head{margin-bottom:28px}.kicker{color:var(--mint);font-size:13px;font-weight:800}.section-head h2{font-size:32px;margin:8px 0}.section-head p{color:var(--muted);line-height:1.9;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(24,42,68,.72),rgba(12,25,45,.62));transition:.25s}.card:hover{transform:translateY(-6px);border-color:rgba(98,237,197,.42)}.icon{font-size:27px}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.9;margin:0;font-size:14px}.project-link{display:inline-flex;margin-top:16px;padding:8px 14px;border-radius:11px;background:rgba(98,237,197,.10);border:1px solid rgba(98,237,197,.25);color:var(--mint);font-size:13px;font-weight:800;transition:.2s}.project-link:hover{background:rgba(98,237,197,.2);transform:translateY(-2px)}
-.skills{display:flex;flex-wrap:wrap;gap:11px}.skill{padding:10px 16px;border-radius:50px;border:1px solid rgba(98,237,197,.22);background:rgba(98,237,197,.06);color:#c8f9e9}
-.contact{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px;border-radius:24px;border:1px solid rgba(98,237,197,.22);background:linear-gradient(110deg,rgba(98,237,197,.10),rgba(120,185,255,.08))}
-.contact p{color:var(--muted);margin:6px 0 0}.email{direction:ltr;color:var(--mint);font-weight:700;overflow-wrap:anywhere}
-footer{padding:25px 0;color:#7f8da5;text-align:center;border-top:1px solid var(--line);font-size:13px}
-.reveal{opacity:0;transform:translateY(22px);transition:.7s}.reveal.show{opacity:1;transform:none}
-@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(98,237,197,0)}}@keyframes float{50%{transform:translateY(-13px) rotate(2deg)}}
-@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.nav{height:70px}.navlinks{display:none}.hero{grid-template-columns:1fr;text-align:center;padding:55px 0 35px;gap:12px}.eyebrow{font-size:13px}h1{margin-top:22px}.intro{font-size:16px;margin-inline:auto}.actions{justify-content:center}.visual{min-height:350px}.orbit{width:275px}.float-tag{font-size:14px}.tag1{right:0}.tag2{left:0}.cards{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.section-head h2{font-size:27px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="وب‌سایت شخصی علی مهدی عنایتی؛ دانش‌آموز رشته کامپیوتر و علاقه‌مند به برنامه‌نویسی و هوش مصنوعی.">
+  <title>علی مهدی عنایتی | وب‌سایت شخصی</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+    :root{--bg:#080b16;--panel:rgba(18,24,43,.78);--line:rgba(125,148,255,.19);--text:#f4f6ff;--muted:#aab3ca;--cyan:#48e5ff;--purple:#a78bfa;--green:#5cf2bd}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 15% 12%,rgba(87,69,190,.22),transparent 30%),radial-gradient(circle at 90% 35%,rgba(0,190,220,.13),transparent 27%),var(--bg);color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.9;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .orb{position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(100px);opacity:.12;pointer-events:none;z-index:-1;background:var(--cyan);top:55%;left:-130px}
+    .container{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,11,22,.76);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;font-size:1.12rem;letter-spacing:-.5px}.brand span{color:var(--cyan)}
+    .links{display:flex;gap:26px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--cyan)}
+    .menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:white;border-radius:14px;padding:8px 12px;font-size:1.2rem}
+    .hero{min-height:620px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px;padding:70px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:rgba(72,229,255,.06);color:var(--cyan);padding:6px 14px;border-radius:99px;font-size:.83rem}
+    .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 14px var(--green)}
+    h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.25;margin:22px 0 14px;font-weight:900;letter-spacing:-2px}
+    h1 span{background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .intro{color:var(--muted);font-size:1.08rem;max-width:590px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:11px 20px;border-radius:14px;font-weight:700;border:1px solid var(--line);transition:.25s;display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:linear-gradient(110deg,#28cce8,#8c76f5);color:#06101a;border:0;box-shadow:0 10px 35px rgba(72,229,255,.16)}
+    .btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+    .visual{position:relative;display:grid;place-items:center;min-height:390px}
+    .ring{position:absolute;width:320px;height:320px;border:1px solid rgba(72,229,255,.3);border-radius:50%;box-shadow:0 0 60px rgba(72,229,255,.1),inset 0 0 55px rgba(167,139,250,.08);animation:spin 22s linear infinite}
+    .ring:before,.ring:after{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan);top:42px;left:44px}
+    .ring:after{background:var(--purple);box-shadow:0 0 20px var(--purple);top:auto;left:auto;bottom:35px;right:30px}
+    .profile-card{position:relative;width:min(300px,80vw);padding:34px 25px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:linear-gradient(145deg,rgba(25,34,62,.92),rgba(12,17,32,.88));box-shadow:0 25px 80px #0008;text-align:center}
+    .avatar{width:100px;height:100px;margin:0 auto 16px;border-radius:28px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:grid;place-items:center;color:#07111c;font-size:2.5rem;font-weight:900;box-shadow:0 0 35px rgba(72,229,255,.2)}
+    .profile-card h2{margin:0;font-size:1.35rem}.profile-card p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+    .mini-tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:20px}.mini-tags span{font-size:.75rem;color:#d9eaff;border:1px solid var(--line);padding:4px 10px;border-radius:99px}
+    section{padding:76px 0}
+    .section-head{margin-bottom:30px}.kicker{color:var(--cyan);font-size:.82rem;font-weight:700}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:5px 0 8px}.section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .glass{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 15px 50px #0002}
+    .glass p{color:var(--muted);margin:0}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:17px;border-radius:17px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
+    .stat strong{display:block;font-size:1.2rem;color:var(--cyan)}.stat small{color:var(--muted)}
+    .achievements{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .award{position:relative;overflow:hidden}.award:before{content:"";position:absolute;width:170px;height:170px;background:var(--purple);filter:blur(90px);opacity:.13;top:-90px;left:-70px}
+    .award-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:rgba(72,229,255,.1);font-size:1.45rem;margin-bottom:13px}
+    .award h3{margin:0 0 8px;font-size:1.1rem}.award p{font-size:.91rem;color:var(--muted);margin:0}
+    .photo-card{grid-column:1/-1;padding:14px}.photo-card img{width:100%;max-height:570px;object-fit:cover;border-radius:15px;display:block}.photo-caption{padding:13px 8px 3px;color:var(--muted);font-size:.88rem}
+    .ad-card{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(30,53,88,.8),rgba(54,31,94,.7));border:1px solid rgba(167,139,250,.3);border-radius:26px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .ad-card:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--cyan);filter:blur(110px);opacity:.13;left:10%;top:-120px}
+    .ad-card h3{font-size:1.55rem;margin:0 0 7px}.ad-card p{color:var(--muted);margin:0;max-width:620px}
+    .handle{direction:ltr;display:inline-block;color:var(--cyan);font-weight:800;font-size:1.05rem;margin-top:12px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem;text-align:center}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:760px){.links{display:none;position:absolute;top:76px;right:4%;left:4%;padding:18px;background:#11182b;border:1px solid var(--line);border-radius:18px;flex-direction:column;gap:12px}.links.open{display:flex}.menu-btn{display:block}.hero{grid-template-columns:1fr;text-align:center;padding:55px 0 35px;gap:20px}.intro{margin:auto}.actions{justify-content:center}.visual{min-height:340px}.ring{width:270px;height:270px}.about-grid,.achievements{grid-template-columns:1fr}.photo-card{grid-column:auto}.ad-card{align-items:flex-start;flex-direction:column;padding:25px}.section-head{text-align:center}section{padding:58px 0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
 <body>
-<header class="topbar"><div class="wrap nav">
-<a class="brand" href="#home">ALI <span>MAHDI</span><span style="color:#fff">.</span></a>
-<nav class="navlinks"><a href="#about">درباره من</a><a href="#skills">مهارت‌ها</a><a href="#projects">نمونه‌کارها</a><a href="#contact">ارتباط</a></nav>
-<div class="menu-wrap"><button class="menu-btn" id="menuBtn" aria-label="باز کردن منو" aria-expanded="false" aria-controls="dropdown"><span class="dots"><i></i><i></i><i></i></span></button>
-<div class="dropdown" id="dropdown"><a href="#about">👤 درباره من</a><a href="#skills">⚡ مهارت‌ها</a><a href="#projects">🧩 نمونه‌کارها</a><a href="#contact">✉️ ارتباط با من</a></div></div>
-</div></header>
-<main id="home"><div class="wrap hero">
-<div class="reveal"><div class="eyebrow"><span class="pulse"></span> دانش‌آموز کامپیوتر و علاقه‌مند به فناوری</div>
-<h1>سلام، من<br><em>علی مهدی</em> هستم.</h1>
-<p class="intro">به دنیای کامپیوتر، برنامه‌نویسی و هوش مصنوعی علاقه دارم. اینجا فضای من برای معرفی مهارت‌هایی است که یاد می‌گیرم و پروژه‌هایی که با علاقه می‌سازم.</p>
-<div class="actions"><a class="btn primary" href="#about">بیشتر درباره من <span>←</span></a><a class="btn secondary" href="#projects">مشاهده نمونه‌کارها</a></div></div>
-<div class="visual reveal"><div class="orbit"><div class="monogram">AM</div></div><div class="float-tag tag1">💡 یادگیری مداوم</div><div class="float-tag tag2">🤖 هوش مصنوعی</div><span class="spark"></span></div>
-</div>
-<section class="content" id="about"><div class="wrap reveal"><div class="section-head"><span class="kicker">01 / ABOUT</span><h2>درباره من</h2><p>من علی مهدی هستم؛ دانش‌آموز رشته کامپیوتر و علاقه‌مند به ساختن چیزهای تازه با فناوری. هدفم یادگیری عمیق، تجربه‌کردن ایده‌ها و تبدیل آن‌ها به پروژه‌های کاربردی است.</p></div></div></section>
-<section class="content" id="skills"><div class="wrap reveal"><div class="section-head"><span class="kicker">02 / SKILLS</span><h2>مهارت‌ها و مسیر یادگیری</h2><p>مهارت‌هایی که در حال یادگیری و تقویت آن‌ها هستم.</p></div><div class="skills"><span class="skill">Python</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">هوش مصنوعی</span><span class="skill">Microsoft Word</span><span class="skill">Excel</span><span class="skill">PowerPoint</span></div></div></section>
-<section class="content" id="projects"><div class="wrap reveal"><div class="section-head"><span class="kicker">03 / PROJECTS</span><h2>نمونه‌کارها و ایده‌ها</h2><p>این بخش برای نمایش پروژه‌هایی است که می‌سازم و به‌مرور تکمیل می‌کنم.</p></div>
-<div class="cards"><article class="card"><div class="icon">🌐</div><h3>طراحی وب‌سایت</h3><p>ساخت صفحه‌های وب با HTML، CSS و JavaScript و تمرکز بر طراحی واکنش‌گرا.</p></article><article class="card"><div class="icon">📊</div><h3>ابزارهای کاربردی</h3><p>ساخت جدول‌ها و ابزارهای ساده برای مدیریت اطلاعات و انجام کارهای روزمره.</p></article><article class="card"><div class="icon">🤖</div><h3>هوش مصنوعی</h3><p>یادگیری مفاهیم هوش مصنوعی و بررسی ایده‌هایی برای پروژه‌های آینده.</p></article><article class="card"><div class="icon">🎬</div><h3>AI Studio</h3><p>معرفی ابزارهای هوش مصنوعی برای ساخت ویدیو، شخصیت‌های سخنگو و انیمیشن.</p><a class="project-link" href="ai_studio_project.html" target="_blank" rel="noopener">مشاهده پروژه ↗</a></article></div></div></section>
-<section class="content" id="contact"><div class="wrap reveal"><div class="contact"><div><span class="kicker">04 / CONTACT</span><h2 style="margin:7px 0">در ارتباط باشیم</h2><p>برای پیام و پیشنهاد همکاری می‌توانی از طریق ایمیل با من در ارتباط باشی.</p></div><a class="email" href="mailto:alimahdienayati13881389@gmail.com">alimahdienayati13881389@gmail.com</a></div></div></section>
-</main>
-<footer><div class="wrap">ساخته‌شده با علاقه به فناوری · علی مهدی © <span id="year"></span></div></footer>
-<script>
-const menuBtn=document.getElementById('menuBtn'),dropdown=document.getElementById('dropdown');
-menuBtn.addEventListener('click',()=>{const open=dropdown.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
-dropdown.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{dropdown.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
-document.addEventListener('click',e=>{if(!e.target.closest('.menu-wrap')){dropdown.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}});
-document.getElementById('year').textContent=new Date().getFullYear();
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target);}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-</script>
-</body></html>
+  <div class="orb"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">ALI<span>.</span>MAHDI</a>
+      <nav class="links" id="navLinks">
+        <a href="#home">خانه</a><a href="#about">درباره من</a><a href="#awards">افتخارات</a><a href="#advertise">تبلیغات</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span> وب‌سایت شخصی و نمونه‌کار</div>
+        <h1>سلام، من <span>علی مهدی</span> هستم</h1>
+        <p class="intro">دانش‌آموز رشته کامپیوتر، علاقه‌مند به دنیای فناوری، برنامه‌نویسی و هوش مصنوعی. اینجا گوشه‌ای از مسیر یادگیری، فعالیت‌ها و افتخارات من را می‌بینید.</p>
+        <div class="actions"><a class="btn primary" href="#awards">دیدن افتخارات من <span>↙</span></a><a class="btn" href="#about">بیشتر درباره من</a></div>
+      </div>
+      <div class="visual reveal">
+        <div class="ring"></div>
+        <div class="profile-card">
+          <div class="avatar">ع‌م</div>
+          <h2>علی مهدی عنایتی</h2>
+          <p>Computer Student · AI Enthusiast</p>
+          <div class="mini-tags"><span>فناوری</span><span>برنامه‌نویسی</span><span>هوش مصنوعی</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="about">
+      <div class="section-head reveal"><span class="kicker">ABOUT ME / درباره من</span><h2>علاقه‌مند به ساختن آینده</h2><p>یادگیری، تجربه‌کردن و تبدیل ایده‌ها به پروژه‌های واقعی.</p></div>
+      <div class="about-grid">
+        <div class="glass reveal"><p>من علی مهدی عنایتی هستم؛ دانش‌آموز رشته کامپیوتر. به فناوری اطلاعات و به‌خصوص هوش مصنوعی علاقه دارم و تلاش می‌کنم با یادگیری مهارت‌های تازه، ایده‌هایم را به دستاوردها و پروژه‌های کاربردی تبدیل کنم.</p></div>
+        <div class="glass stats reveal">
+          <div class="stat"><strong>کامپیوتر</strong><small>رشته تحصیلی</small></div>
+          <div class="stat"><strong>هوش مصنوعی</strong><small>حوزه مورد علاقه</small></div>
+          <div class="stat"><strong>یادگیری</strong><small>مسیر همیشگی</small></div>
+          <div class="stat"><strong>ایده‌پردازی</strong><small>شروع هر پروژه</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="awards">
+      <div class="section-head reveal"><span class="kicker">ACHIEVEMENTS / افتخارات</span><h2>قدم‌هایی که به آن‌ها افتخار می‌کنم</h2><p>بخشی از دستاوردها و تجربه‌های من در مسیر فناوری و مهارت‌آموزی.</p></div>
+      <div class="achievements">
+        <article class="glass award reveal"><div class="award-icon">🏆</div><h3>رتبه اول مهارت رقومی دیجیکالا</h3><p>کسب رتبه اول در رقابت مهارت رقومی دیجیکالا در سطح کشور؛ به نمایندگی از استان تهران و به‌عنوان نخستین نماینده از شهرستان‌های استان تهران، طبق توضیح ارائه‌شده.</p></article>
+        <article class="glass award reveal"><div class="award-icon">🤖</div><h3>رتبه اول هوش مصنوعی کشور</h3><p>کسب عنوان نفر اول هوش مصنوعی در کشور.</p></article>
+        <figure class="glass photo-card reveal">
+          <img src="assets/award-ceremony.jpg" alt="علی مهدی در مراسم دریافت تقدیرنامه در کنار مسئولان">
+          <figcaption class="photo-caption">تصویری از مراسم دریافت تقدیرنامه در حوزه آموزش و پرورش.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container" id="advertise">
+      <div class="section-head reveal"><span class="kicker">ADVERTISEMENT / همکاری</span><h2>تبلیغات و همکاری</h2><p>برای معرفی کسب‌وکارها، رسانه‌ها و فرصت‌های آموزشی و کاری.</p></div>
+      <div class="ad-card reveal">
+        <div><h3>Javidan Media</h3><p>معرفی محتوا و فرصت‌های کسب درآمد در خانه. پیش از همکاری یا ثبت‌نام، شرایط و اعتبار هر فرصت را بررسی کنید؛ درآمد مشخص یا تضمین‌شده نیست.</p><a class="handle" href="https://t.me/Javidan_Media12" target="_blank" rel="noopener noreferrer">@Javidan_Media12</a></div>
+        <a class="btn primary" href="https://t.me/Javidan_Media12" target="_blank" rel="noopener noreferrer">مشاهده کانال ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">© <span id="year"></span> علی مهدی عنایتی · ساخته‌شده با علاقه به فناوری</div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
